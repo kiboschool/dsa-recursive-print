@@ -2,8 +2,10 @@ class Print:
 
     def recursive_print(self, f):
         line = f.readline()
-        # Task 1
-        # continue implementation here
+        if line == "":
+            return
+        print(line.replace('\n', ''))
+        self.recursive_print(f)
 
     def print_file(self, filename):
         f = open(filename)
@@ -12,8 +14,10 @@ class Print:
 
     def recursive_print_reverse(self, f):
         line = f.readline()
-        # Task 2
-        # continue implementation here
+        if line == "":
+            return
+        self.recursive_print_reverse(f)
+        print(line.replace('\n', ''))
 
     def print_file_reverse(self, filename):
         f = open(filename)
